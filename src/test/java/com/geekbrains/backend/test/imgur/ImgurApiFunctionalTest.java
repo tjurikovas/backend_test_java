@@ -90,7 +90,7 @@ public class ImgurApiFunctionalTest extends ImgurApiAbstractTest {
     void postImageMyTest() {
         given()
                 .spec(requestSpecification)
-                .multiPart("image", getFileResource("myImage.jpg"))
+                .multiPart("image", getFileResource("myImages.jpg"))
                 .formParam("description", "This is my picture!")
                 .log()
                 .all()
