@@ -136,7 +136,7 @@ public class ImgurApiFunctionalTest extends ImgurApiAbstractTest {
                 .log()
                 .all()
                 .expect()
-                .body("success", is("true"))
+                .body("success", is(true))
                 .log()
                 .all()
                 .when()
