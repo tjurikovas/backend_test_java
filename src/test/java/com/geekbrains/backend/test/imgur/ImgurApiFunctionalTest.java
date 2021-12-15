@@ -16,13 +16,13 @@ public class ImgurApiFunctionalTest extends ImgurApiAbstractTest {
     @Test
     @Order(1)
     void getAccountBase() {
-        String userName = "levinmk23";
+        String userName = "tjurikovas";
         given()
                 .spec(requestSpecification)
                 .log()
                 .all()
                 .expect()
-                .body("data.id", is(153514053))
+                .body("data.id", is(157845477))
                 .log()
                 .all()
                 .when()
@@ -73,7 +73,7 @@ public class ImgurApiFunctionalTest extends ImgurApiAbstractTest {
         given()
                 .spec(requestSpecification)
                 .formParam("image_id", "8xGCvWR")
-                .formParam("comment", "Hello world")
+                .formParam("comment", "Hello world! Привет!")
                 .log()
                 .all()
                 .expect()
