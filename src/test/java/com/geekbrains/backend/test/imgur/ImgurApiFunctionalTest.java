@@ -84,4 +84,65 @@ public class ImgurApiFunctionalTest extends ImgurApiAbstractTest {
                 .when()
                 .post("comment");
     }
+
+    @Test
+    @Order(4)
+    void postImageMyTest() {
+        given()
+                .spec(requestSpecification)
+                .multiPart("image", getFileResource("myImage.jpg"))
+                .formParam("description", "This is my picture!")
+                .log()
+                .all()
+                .expect()
+                .body("status", is(200))
+                .body("data.type", is("image/jpg"))
+                .log()
+                .all()
+                .when()
+                .post("upload");
+    }
+
+    @Test
+    @Order(5)
+    void GetImageMy() {
+        String imageHash = "Ydtr5xr";
+        given()
+                .spec(requestSpecification)
+                .log()
+                .all()
+                .expect()
+                .body("data.id", is("Ydtr5xr"))
+                .body("data.type", is("image/jpeg"))
+                .body("data.account_id", is(157845477))
+                .body("data.link", is("https://i.imgur.com/Ydtr5xr.jpg"))
+                .log()
+                .all()
+                .when()
+                .get("image/" + imageHash)
+                .then()
+                .statusCode(200);
+
+    }
+
+    @Test
+    @Order(6)
+    void GetGalleryMy() {
+        String section = "top";
+        String sort = "time";
+        int page = 1;
+        given()
+                .spec(requestSpecification)
+                .log()
+                .all()
+                .expect()
+                .body("success", is("true"))
+                .log()
+                .all()
+                .when()
+                .get("gallery/" + section + "/" + sort + "/window/" + page)
+                .then()
+                .statusCode(200);
+    }
+
 }
