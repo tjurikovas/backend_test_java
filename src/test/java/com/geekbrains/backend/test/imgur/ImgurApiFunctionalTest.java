@@ -1,9 +1,10 @@
 package com.geekbrains.backend.test.imgur;
 
-import org.junit.jupiter.api.MethodOrderer;
-import org.junit.jupiter.api.Order;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestMethodOrder;
+import io.restassured.builder.ResponseSpecBuilder;
+import io.restassured.specification.RequestSpecification;
+import io.restassured.specification.ResponseSpecification;
+import org.hamcrest.Matchers;
+import org.junit.jupiter.api.*;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.is;
@@ -12,6 +13,16 @@ import static org.hamcrest.Matchers.is;
 public class ImgurApiFunctionalTest extends ImgurApiAbstractTest {
 
     private static String CURRENT_IMAGE_ID;
+
+    ResponseSpecification responseSpecification = null;
+
+    @BeforeEach
+    void beforeTest() {
+        responseSpecification = new ResponseSpecBuilder()
+                .expectStatusCode(200)
+                .expectResponseTime(Matchers.lessThan(7000L))
+                .build();
+    }
 
     @Test
     @Order(1)
@@ -36,7 +47,7 @@ public class ImgurApiFunctionalTest extends ImgurApiAbstractTest {
                 .spec(requestSpecification)
                 .multiPart("image", getFileResource("img.jpg"))
                 .formParam("name", "Picture")
-                .formParam("title", "The best picture!")
+                .formParam("title", "The best picture!!!)))")
                 .log()
                 .all()
                 .expect()
@@ -72,17 +83,17 @@ public class ImgurApiFunctionalTest extends ImgurApiAbstractTest {
     void testCreateComment() {
         given()
                 .spec(requestSpecification)
-                .formParam("image_id", "8xGCvWR")
-                .formParam("comment", "Hello world! Привет!")
-                .log()
-                .all()
-                .expect()
-                .body("success", is(true))
-                .body("status", is(200))
-                .log()
-                .all()
+                .formParam("image_id", "6L1LCRK")
+                .formParam("comment", "Ha - ha)))")
                 .when()
-                .post("comment");
+                .post("comment")
+                .prettyPeek()
+                .then()
+                .spec(responseSpecification)
+                .log()
+                .all();
+
+
     }
 
     @Test
@@ -120,8 +131,9 @@ public class ImgurApiFunctionalTest extends ImgurApiAbstractTest {
                 .all()
                 .when()
                 .get("image/" + imageHash)
+                .prettyPeek()
                 .then()
-                .statusCode(200);
+                .spec(responseSpecification);
 
     }
 
@@ -141,8 +153,8 @@ public class ImgurApiFunctionalTest extends ImgurApiAbstractTest {
                 .all()
                 .when()
                 .get("gallery/" + section + "/" + sort + "/window/" + page)
+                .prettyPeek()
                 .then()
-                .statusCode(200);
+                .spec(responseSpecification);
     }
-
 }
