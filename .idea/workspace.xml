@@ -5,20 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="56159ec7-0b4e-442a-8474-0f5ae7651a47" name="Changes" comment="Lesson 3. Rest Assured&#10;Тестирование внешнего сервиса при помощи Rest Assured">
-      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/backend/test/miniMarket/MiniMarketApi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/backend/test/miniMarket/MiniMarketService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/backend/test/miniMarket/ObjectResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/backend/test/miniMarket/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/backend/test/miniMarket/ProductResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/geekbrains/backend/test/miniMarket/MiniMarketFunctionalTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/geekbrains/backend/test/miniMarket/MiniMarketRetrofitTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/db/dao/CategoriesMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/db/dao/ProductsMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/db/mapper/xml/CategoriesMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/db/mapper/xml/ProductsMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/db/model/Categories.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/db/model/CategoriesExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/db/model/Products.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/db/model/ProductsExample.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/geekbrains/backend/test/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/backend/test/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/geekbrains/backend/test/miniMarket/MiniMarketFunctionalTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,9 +34,35 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <excluded-from-favorite>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="master" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </excluded-from-favorite>
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="HW_6" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="HW_4" />
+        <entry key="$PROJECT_DIR$" value="HW_7" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -70,34 +92,57 @@
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/test/resources/com/geekbrains/backend/test/ImgurApiFunctionalTest" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/com/geekbrains/db" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Java\backend-test-dec-2021\src\main\resources\com\geekbrains\db" />
+      <recent name="C:\Java\backend-test-dec-2021\src\main\resources" />
       <recent name="$PROJECT_DIR$/src/test/resources/com/geekbrains/backend/test/ImgurApiFunctionalTest" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Java\backend-test-dec-2021\src\test\resources" />
       <recent name="$PROJECT_DIR$/src/test/resources/com/geekbrains/backend/test/imgur" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.geekbrains.backend.test" />
+      <recent name="com.geekbrains.db" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="com.geekbrains.backend.test" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.MiniMarketRetrofitTest.modifyProduct">
+  <component name="RunManager" selected="Application.TestDb">
     <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.geekbrains.backend.test.Test" />
       <module name="backend-test-dec-2021" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.geekbrains.backend.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestDb" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.geekbrains.db.TestDb" />
+      <module name="backend-test-dec-2021" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.geekbrains.db.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -116,22 +161,6 @@
       <option name="PACKAGE_NAME" value="com.geekbrains.backend.test.imgur" />
       <option name="MAIN_CLASS_NAME" value="com.geekbrains.backend.test.imgur.ImgurApiFunctionalTest" />
       <option name="METHOD_NAME" value="GetImageMy" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ImgurApiFunctionalTest.testCreateComment" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="backend-test-dec-2021" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.geekbrains.backend.test.imgur.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.geekbrains.backend.test.imgur" />
-      <option name="MAIN_CLASS_NAME" value="com.geekbrains.backend.test.imgur.ImgurApiFunctionalTest" />
-      <option name="METHOD_NAME" value="testCreateComment" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -172,10 +201,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.MiniMarketRetrofitTest.modifyProduct" />
-        <item itemvalue="Application.Test" />
         <item itemvalue="JUnit.MiniMarketRetrofitTest.getCategoryById" />
         <item itemvalue="JUnit.ImgurApiFunctionalTest.GetImageMy" />
-        <item itemvalue="JUnit.ImgurApiFunctionalTest.testCreateComment" />
+        <item itemvalue="Application.TestDb" />
+        <item itemvalue="Application.Test" />
       </list>
     </recent_temporary>
   </component>
@@ -242,7 +271,21 @@
       <option name="project" value="LOCAL" />
       <updated>1639637514001</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Lesson 3. Rest Assured&#10;Тестирование внешнего сервиса при помощи Rest Assured">
+      <created>1640237900569</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1640237900569</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Lesson 3. Rest Assured&#10;Тестирование внешнего сервиса при помощи Rest Assured">
+      <created>1640609192458</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1640609192458</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -270,6 +313,10 @@
         <breakpoint enabled="true" type="java-exception">
           <properties class="java.lang.AssertionError" package="java.lang" />
           <option name="timeStamp" value="3" />
+        </breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="4" />
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>
